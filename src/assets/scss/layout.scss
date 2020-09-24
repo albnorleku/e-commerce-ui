@@ -1,0 +1,56 @@
+.l{
+  &-snack-error{
+    button span{
+      color: red;
+    }
+  }
+
+  &-right-side{
+    min-height: 100%;
+    overflow: hidden;
+    padding:15px;
+  }
+
+  &-toggle-sidenav-button{
+    position: fixed !important;
+    top: 16px !important;
+    min-width: 40px !important;
+    width: 40px;
+    z-index: 9999;
+    height: 40px;
+    padding: 0 !important;
+    left: 15px;
+  }
+
+  &-left-sidenav{
+    width: 240px;
+    overflow: hidden;
+    z-index: 0;
+
+    a{
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      font-weight: 600;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      display: block;
+      color: #7f91b5;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &.active-link{
+        border-left: 5px #fff;
+      }
+
+      i{
+        margin-right: 6px;
+      }
+    }
+  }
+
+
+}

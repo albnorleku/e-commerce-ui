@@ -1,0 +1,56 @@
+.header-top {
+    background-color: var(--color-primary) !important; // todo: remove important after theme folder is deleted.
+
+}
+.navigation {
+    background-color: var(--headerBackground) !important;
+
+    .logo-plc {
+        width: 130px;
+        height: 35px;
+        padding-top: 0 !important;
+        margin-top: 4px;
+
+        img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain;
+        }
+    }
+}
+
+.header-bottom {
+    a {
+        &:hover,
+        &.subnav-hover.active-link {
+            color: var(--color-primary) !important; // todo: remove important after theme folder is deleted.
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767.98px) {
+    .header-bottom {
+        background: var(--color-primary-lighten) !important;
+
+        ul {
+            &.header-submenu {
+                background: var(--color-primary);
+            }
+
+            li {
+                a {
+                    &.open {
+                        background: var(--color-primary);
+                    }
+                }
+            }
+
+            .header-submenu-wrapper {
+                > a {
+                    background: var(--color-primary);
+                }
+            }
+        }
+    }
+}

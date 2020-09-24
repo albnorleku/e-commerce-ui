@@ -1,0 +1,46 @@
+<!-- Card Wrapper -->
+<div class="card">
+
+    <!-- Card Badge-->
+<!--    <div class="card__badge">-->
+<!--        <div class="card__badge-box card__badge-box&#45;&#45;off">-->
+<!--            <span>10% OFF</span>-->
+<!--        </div>-->
+
+<!--        <div class="card__badge-box card__badge-box&#45;&#45;new">-->
+<!--            <span>NEW</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <!-- Card Images-->
+    <div class="card__images card__images--product">
+        <img class="img-fluid" alt="Logo" [src]="productImage">
+    </div>
+
+    <!-- Card Footer-->
+    <div class="card__footer">
+        <div class="card__footer-text" *ngIf="product?.name">
+            <span class="product-category" *ngIf="categories">
+                <span class="product-category" *ngIf="categories">
+                   <div [title]="categories">{{categories}}</div>
+                </span>
+            </span>
+
+            <span class="product-name" style="-webkit-box-orient: vertical;">{{product ? product.name : ''}}</span>
+
+            <span class="product-name-tooltip" *ngIf="product && product.name && product.name.length >= 86">{{ product.name }}</span>
+        </div>
+
+        <div class="card__footer-price">
+            <span class="price-off">
+                ${{product.price}}
+
+                <ng-template [ngIf]="product.uom && product.uom.name && product.uom.name.toLowerCase() !== 'piece' && product.uom.name.toLowerCase() !== 'item'">
+                    / {{ product.uom.name }}
+                </ng-template>
+            </span>
+            <span class="price-with-relation" *ngIf="relationTotalPrice !== undefined">(+{{ relationTotalPrice }})</span>
+<!--            <span class="price-off"><del>$49.99</del></span>-->
+        </div>
+    </div>
+</div>

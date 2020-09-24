@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="14px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+<title>filter2</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="filter2" transform="translate(1.000000, 0.000000)">
+        <g id="if_filter_2561439" stroke-linecap="round" stroke-linejoin="round" transform="translate(0.000000, 3.000000)" stroke="#6C757D">
+            <polygon id="Shape" points="0 0 4.65885456 5.43846609 4.65885456 9.19825132 6.98828184 10.3480327 6.98828184 5.43846609 11.6471364 0"></polygon>
+        </g>
+        <g id="Shape" transform="translate(9.000000, 0.000000)">
+            <g id="path-1-link" transform="translate(1.000000, 1.000000)" fill="#6E777E" fill-rule="nonzero">
+                <polygon id="path-1" points="4 0.402857143 3.5971429 0 2 1.59714286 0.4028571 0 0 0.402857143 1.5971429 2 0 3.59714286 0.4028571 4 2 2.40285714 3.5971429 4 4 3.59714286 2.4028571 2"></polygon>
+            </g>
+            <polygon stroke="#F1F5F7" points="4.1099639 3 5.7071068 4.59714286 4.5971429 5.70710678 3 4.10996392 1.4028571 5.70710678 0.29289322 4.59714286 1.8900361 3 0.29289322 1.40285714 1.4028571 0.292893219 3 1.89003608 4.5971429 0.292893219 5.7071068 1.40285714"></polygon>
+            <g id="path-1-link" transform="translate(1.000000, 1.000000)" stroke="#6C757D" stroke-width="0.5">
+                <polygon id="path-1" points="4 0.402857143 3.5971429 0 2 1.59714286 0.4028571 0 0 0.402857143 1.5971429 2 0 3.59714286 0.4028571 4 2 2.40285714 3.5971429 4 4 3.59714286 2.4028571 2"></polygon>
+            </g>
+        </g>
+    </g>
+</g>
+</svg>

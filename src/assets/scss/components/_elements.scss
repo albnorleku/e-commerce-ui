@@ -1,0 +1,106 @@
+// Tabs //
+.tabs-header {
+  padding: 18px 30px 0 30px;
+  background-color: var(--color-white);
+  box-shadow: 0 5px 13px -8px var(--color-gains-boro);
+  min-height: 55px;
+  ul {
+      &.mat-tab-nav-bar {
+          border-bottom: 0;
+      }
+
+      li {
+          padding-bottom: 16px;
+          display: inline-flex;
+          cursor: pointer;
+          &:not(last-child) {
+              margin-right: 40px !important;
+          }
+
+          span {
+              color: var(--color-gray);
+              min-width: initial;
+              padding: 0;
+              height: initial;
+              font-size: font-size(base);
+          }
+
+          &.active {
+              border-bottom-color: var(--color-primary) !important;
+
+              span {
+                  color: var(--color-primary) !important;
+              }
+          }
+
+          a {
+              &.mat-tab-link {
+                  color: var(--color-gray);
+                  min-width: initial;
+                  padding: 0;
+                  height: initial;
+                  font-size: font-size(base);
+                  opacity: 1;
+                  font-weight: 400;
+              }
+
+              &.mat-tab-label-active {
+                  color: var(--color-primary);
+              }
+          }
+      }
+
+      .mat-ink-bar {
+          background-color: var(--color-primary) !important;
+      }
+  }
+}
+
+.mat-tab-header {
+    border-radius: 4px;
+    min-height: 55px;
+    box-shadow: 0 5px 13px -8px var(--color-gains-boro);
+    padding: 11px 30px 0;
+    background-color: var(--color-white);
+    margin-bottom: 30px;
+    border-bottom: 0 !important;
+
+    .mat-tab-label{
+        margin-right: 40px;
+        opacity: 1;
+        height: 33px;
+        .mat-tab-label-content{
+            color: var(--color-gray);
+            font-weight: 400;
+            font-size: font-size(base);
+        }
+
+        &-active {
+            .mat-tab-label-content {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    .mat-ink-bar {
+        background-color: var(--color-primary) !important;
+    }
+}
+
+// Range Slider //
+.range-server {
+    &.ng5-slider {
+
+        .ng5-slider-pointer {
+            border-width: 2px;
+            border-style: solid;
+            border-color: var(--color-primary) !important;
+        }
+
+        .ng5-slider-selection {
+            background-color: var(--color-primary) !important;
+        }
+    }
+}
+
+//Responsive

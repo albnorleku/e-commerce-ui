@@ -1,0 +1,92 @@
+.table {
+    thead {
+        th {
+            vertical-align: middle;
+            border: none;
+        }
+    }
+
+    tbody {
+        tr {
+            &:first-child {
+                td {
+                    border-top: none;
+                }
+            }
+
+            td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+
+.table,
+.mat-table {
+    table-layout: auto;
+    width: 100%;
+    background-color: var(--color-white);
+
+    thead {
+        tr,
+        mat-header-row {
+            background-color: var(--color-gray-light) !important; //todo: remove important
+            height: 56px;
+
+            th,
+            mat-header-cell {
+                font-size: font-size(base);
+                color: var(--color-gray) !important;
+                font-weight: 600;
+                letter-spacing: 0.03em;
+                border-bottom: none;
+                padding-right: 15px;
+
+                &:first-child {
+                    padding-left: 24px;
+                }
+
+                &.mat-column-actions {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr,
+        mat-row {
+            border-bottom: 1px solid var(--color-gray-soft);
+            cursor: pointer;
+
+            td,
+            mat-cell {
+                color: var(--color-gray) !important;
+                font-size: font-size(base);
+                border-bottom: none;
+                padding-right: 15px;
+
+                &:first-child {
+                    padding-left: 24px;
+                }
+
+                a {
+                    color: inherit;
+                }
+
+                &.mat-column-actions {
+                    text-align: center;
+                    button {
+                        @include on-event() {
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Responsive

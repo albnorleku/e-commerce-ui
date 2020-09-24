@@ -1,0 +1,14 @@
+// Get color from root.
+@function color($color-name) {
+    @return var(--color-#{$color-name});
+}
+
+// Get font.
+@function font() {
+    @return var(--font-family-sans-serif);
+}
+
+// Get font size from root.
+@function font-size($size) {
+    @return var(--font-size-#{$size});
+}

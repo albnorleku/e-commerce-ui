@@ -1,0 +1,6 @@
+<!-- Filters -->
+<app-filter-widget *ngIf="filters && filters.length"
+                   [fields]="filterResponse"
+                   (locationChange)="searchByLocation($event)">
+</app-filter-widget>
+<!-- End of Filters -->

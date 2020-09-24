@@ -1,0 +1,281 @@
+a,
+.btn,
+button,
+[type="submit"] {
+    &[disabled] {
+        background-color: var(--color-disable) !important; // todo: remove important after we are done with themes folder.
+        color: var(--color-black) !important; // todo: remove important after we are done with themes folder.
+        opacity: .5;
+        cursor: not-allowed;
+
+        &:hover {
+            box-shadow: none !important; // todo: remove important after we are done with themes folder.
+        }
+    }
+}
+
+.btn,
+[mat-flat-button],
+[mat-raised-button],
+[mat-button] {
+    @include button(transparent, black);
+    min-width: 140px !important; // todo: remove important after we are done with themes folder.
+    min-height: 40px;
+    line-height: 40px !important; //todo: remove important after we are done with themes folder.
+    border: 0 !important; // todo: remove important after we are done with themes folder.
+    font-size: font-size(base) !important; // todo: remove important after we are done with themes folder.
+    font-weight: normal !important; // todo: remove important after we are done with themes folder.
+    vertical-align: initial;
+    padding: 0 10px;
+    @include transition(all 0.4s ease-in-out);
+
+    &.no-shadow {
+        &:hover {
+            box-shadow: none !important; // todo: remove important after we are done with themes folder.
+        }
+    }
+}
+
+// Bootstrap 4+ buttons
+.btn {
+    &-link  {
+        display: flex;
+        align-items: center;
+        color: var(--color-primary) !important;
+        justify-content: flex-end;
+
+        span {
+            &.add-icon {
+                border: 1px solid var(--color-primary);
+                border-radius: 3px;
+                width: 14px;
+                height: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 8px;
+
+                i {
+                    color: var(--color-primary);
+                    margin: 0 0 0 1px;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            text-decoration: none !important;
+        }
+
+        &--delete {
+            color: var(--color-warn) !important;
+        }
+    }
+
+    &-default,
+    &-primary {
+        @include button(primary, white);
+    }
+
+    &-secondary {
+        @include button(gray, white);
+    }
+
+    &-success {
+        @include button(success, white);
+    }
+
+    &-danger {
+        @include button(warn, white);
+    }
+
+    &-cancel {
+        @include button(transparent, gray);
+    }
+}
+
+// Angular material buttons
+button,
+a {
+    &[mat-flat-button],
+    &[mat-raised-button],
+    &[mat-button] {
+        &:hover {
+            .mat-button-focus-overlay {
+                opacity: 0;
+            }
+        }
+
+        &[color="primary"] {
+            @include button(primary, white);
+        }
+
+        &[color="accent"] {
+            @include button(success, white);
+        }
+
+        &[color="warn"] {
+            @include button(warn, white);
+        }
+    }
+}
+
+// Snackbar button (x)
+.mat-simple-snackbar-action {
+    .mat-button {
+        min-width: 64px !important; // todo: remove important.
+        padding: 0 16px;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+// Btn with three dots.
+.btn-dots {
+    @include on-event($self: true){
+        box-shadow: none !important;
+    }
+}
+
+// Action buttons inside tables.
+.mat-button,
+mat-button {
+    &.btn-action {
+        color: var(--color-gray) !important; // todo: remove important
+        text-align: left;
+        font-weight: 500 !important; // todo: remove important
+        padding: 0 20px;
+        display: block;
+        width: 100%;
+
+        &:hover {
+            background-color: var(--color-link-water) !important; // todo: remove important after we are done with theme.
+            box-shadow: none;
+            min-width: 168px;
+        }
+
+        &[disabled] {
+            background-color: transparent !important; //todo: remove important after we are done with theme.
+            color: inherit;
+            cursor: not-allowed;
+        }
+
+        i {
+            margin-right: 15px;
+        }
+    }
+}
+
+// Responsive //
+@media (max-width: 575.98px) {
+    .btn {
+        &-link {
+            min-width: inherit !important;
+        }
+    }
+}
+
+// Only for Froala Page //
+
+.btn-df {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: .125rem solid transparent;
+    padding: .375rem 1.625rem;
+    font-size: var(--font-size-base) !important;
+    line-height: 1.5;
+    border-radius: .25rem;
+    min-width: 138px;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+
+    &-primary {
+        color: #fff !important;
+        background-color: #329ef7;
+        border-color: #329ef7;
+
+        &:hover {
+            background-color: #0d8df6;
+            border-color: #0986ed;
+        }
+    }
+
+    &-secondary {
+        color: #fff !important;
+        background-color: #fe6655;
+        border-color: #fe6655;
+
+        &:hover {
+            background-color: #fe442f;
+            border-color: #fe3822;
+        }
+    }
+
+    &-outline-primary {
+        color: #329ef7 !important;
+        background-color: transparent;
+        background-image: none;
+        border-color: #329ef7;
+
+        &:hover {
+            color: #fff !important;
+            background-color: #329ef7;
+            border-color: #329ef7;
+        }
+    }
+
+    &-outline-secondary {
+        color: #fe6655 !important;
+        background-color: transparent;
+        background-image: none;
+        border-color: #fe6655;
+
+        &:hover {
+            color: #fff !important;
+            background-color: #fe6655;
+            border-color: #fe6655;
+        }
+    }
+
+    &-light {
+        color: #212529 !important;
+        background-color: #f8f9fa;
+        border-color: #f8f9fa;
+
+        &:hover {
+            background-color: #e2e6ea;
+            border-color: #dae0e5;
+        }
+    }
+
+    &-outline-light {
+        color: #f8f9fa !important;
+        background-color: transparent;
+        border-color: #f8f9fa;
+
+        &:hover {
+            color: #212529 !important;
+            background-color: #f8f9fa;
+        }
+    }
+
+    &-dark {
+        color: #fff !important;
+        background-color: #343a40;
+        border-color: #343a40;
+
+        &:hover {
+            background-color: #23272b;
+            border-color: #1d2124;
+        }
+    }
+}

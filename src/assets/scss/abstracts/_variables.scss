@@ -1,0 +1,88 @@
+// Colors.
+$colors: (
+    white:          #ffffff,
+    gray:           #6c757d,
+    gray-soft:      #f1f1f1,
+    gray-light:     #f5f6f8,
+    gains-boro:     #e5e5e6,
+    silver:         #cdd5dd,
+    silver-dark:    #c0c2c3,
+    link-water:     #E8F0F9,
+    black:          #343a40,
+    primary:        #008cf4,
+    success:        #4da646,
+    warn:           #eb4343,
+    green-mountain: #019a4e,
+    dark-orange:    #efb451,
+    disable:        #cccccc,
+    transparent:    transparent
+);
+
+$color-primary-lighten: lighten(map-get($colors, primary), 5%);
+
+// Font sizes.
+$sizes: (
+    xl: 18px,
+    lg: 16px,
+    base: 14px,
+    small: 12px
+);
+
+// Fonts
+$font-stack: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+
+// Modal Box Shadow.
+$modal-box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+// Button Box Shadow
+$button-box-shadow: 0 8px 19px -7px rgba(0, 0, 0, 0.5);
+
+:root {
+    --color-white:          #ffffff;
+    --color-gray:           #6c757d;
+    --color-gray-soft: #37656e;
+    --color-gray-light:     #f5f6f8;
+    --color-gains-boro:     #e5e5e6;
+    --color-silver:         #cdd5dd;
+    --color-silver-dark:    #c0c2c3;
+    --color-link-water:     #E8F0F9;
+    --color-black:          #343a40;
+    --color-primary:        #008cf4;
+    --color-success:        #4da646;
+    --color-warn:           #eb4343;
+    --color-green-mountain: #019a4e;
+    --color-dark-orange:    #efb451;
+    --color-disable:        #cccccc;
+    --color-transparent:    transparent;
+
+    --font-family-sans-serif: #{$font-stack};
+
+    // Font sizes
+    @each $name, $size in $sizes {
+        --font-size-#{$name}: #{$size}
+    }
+
+    --color-primary-lighten: #{lighten(map-get($colors, primary), 5%)}
+}
+
+// Breakpoints map
+// @prop {String} keys - Keys are identifiers mapped to a given length
+// @prop {Map} values - Values are actual breakpoints expressed in pixels
+// @see {mixin} respond-to
+$breakpoints: (
+    'xs_up': (min-width: 576px), // Small devices (landscape phones, 576px and up)
+    'sm_up': (min-width: 768px), // Medium devices (tablets, 768px and up)
+    'md_up': (min-width: 992px), // Large devices (desktops, 992px and up)
+    'lg_up': (min-width: 1200px), // Extra large devices (large desktops, 1200px and up)
+
+    'xs_down': (max-width: 575.98px), // Extra small devices (portrait phones, less than 576px)
+    'sm_down': (max-width: 767.98px), // Small devices (landscape phones, less than 768px)
+    'md_down': (max-width: 991.98px), // Medium devices (tablets, less than 992px)
+    'lg_down': (max-width: 1199.98px), // Large devices (desktops, less than 1200px)
+
+    'xs_up-sm_down': (min-width: 576px) and (max-width: 767.98px),
+    'sm_up-md_down': (min-width: 768px) and (max-width: 991.98px),
+    'md_up-lg_down': (min-width: 768px) and (max-width: 991.98px),
+) !default;

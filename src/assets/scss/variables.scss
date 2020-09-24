@@ -1,0 +1,17 @@
+.theme-wrapper {
+    //--buttonColor: #fff;
+    //--buttonBackground: #fff;
+    --navColor: #fff;
+    --navActiveColor: #fff;
+    --headerBackground: #fff;
+    --primarySiteColor: #fff;
+}
+
+$variables: (
+    //--buttonColor: var(--buttonColor),
+    //--buttonBackground: var(--buttonBackground),
+    --navColor: var(--navColor),
+    --navActiveColor: var(--navActiveColor),
+    --headerBackground: var(--navBackground),
+    --primarySiteColor: var(--primarySiteColor)
+);

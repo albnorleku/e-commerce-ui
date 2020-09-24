@@ -1,0 +1,17 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: font();
+    color: var(--color-gray);
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white)
+}
+

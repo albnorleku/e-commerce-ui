@@ -1,0 +1,38 @@
+* {
+    outline: none;
+}
+
+ul,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    resize: none !important; // todo: remove important later.
+}

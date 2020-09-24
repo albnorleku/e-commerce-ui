@@ -1,0 +1,64 @@
+/* =Table of Contents
+--------------------------------------------------------------
+    1.Main Title
+    - 1.1 Line
+    2. Material Icons
+    3. Helpers
+    - 3.1 Remove padding mobile
+    4. Header Menu
+    - 4.1 SubMenu
+    5. Froala Editor
+ */
+
+// 1.Title
+.main-title {
+    margin-bottom: 20px;
+
+    h5 {
+        font-size: font-size(xl);
+        color: var(--color-black);
+        margin: 0;
+    }
+
+    .close {
+        cursor: pointer;
+    }
+
+    // 1.1 Line
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-gray-soft);
+        margin-top: 30px;
+    }
+}
+
+// 2. Material Icons
+.material-icons {
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+// 4.1 Sub Menu
+.subnav {
+    .active-link {
+        color: var(--color-primary);
+    }
+}
+
+// 5. Froala Editor
+.fr-view {
+    padding: 30px;
+
+    p {
+        color: var(--color-black);
+    }
+}
+
+//Responsive

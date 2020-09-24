@@ -1,0 +1,95 @@
+<div class="wrapper">
+    <!-- Left sidebar (Filters...) -->
+    <div [ngClass]="{'toggled': show==true}" class="sidebar-left">
+        <div cdkScrollable class="sidebar-left-inner g-scrollbar">
+            <div class="main-title-sidebar-left">
+                <h3>Filters</h3>
+            </div>
+            <app-product-filtering></app-product-filtering>
+        </div>
+        <div class="bg-arrow bg-arrow--responsive">
+            <em (click)=toggleFilterSidebar()
+               [ngClass]="{'rotate': show == false}"
+               class="material-icons side-toggle">
+                keyboard_arrow_right
+            </em>
+        </div>
+    </div>
+
+    <div class="content-wrapper no-padding-mobile">
+
+        <div class="product-page bg-white padd-no-bottom-30">
+
+            <div class="product-row">
+                <div class="search-sort-wrapper">
+                    <div class="search-wrap">
+                        <form class="form-search">
+                            <div class="actions">
+                                <div class="search-input">
+                                    <input #searchBox [formControl]="searchValue" placeholder="Search..." type="text">
+                                </div>
+                            </div>
+                            <!-- Filters container -->
+                            <div *ngIf="selectedFilters && selectedFilters.length" class="search-content">
+                                <div class="smart-search-selection">
+                                    <ng-container *ngFor="let filter of selectedFilters">
+                                        <div (click)="onFilterRemove(filter)"
+                                             class="front-door-selection">
+                                            <span *ngIf="filter.filterType === 'numberFacet'" class="name-tag">
+                                                {{(filter.path === 'ram' || filter.path === 'cpu' ? (filter.path | uppercase) : (filter.path | titlecase)) + ': ' + filter.value.name}}
+                                            </span>
+                                            <span *ngIf="filter.filterType !== 'numberFacet'"
+                                                  class="name-tag">{{filter.value.name}}</span>
+                                            <span class="remove-icon">close</span>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <div *ngIf="objectKeys(selectedFilters).length" class="action-button action-button--clear-filter no-padd">
+                                <a (click)="onClickClearFilters()">
+                                    <img alt="Clear Filter" src="/assets/images/icons/filter.svg">
+                                    <span>Clear Filter</span>
+                                </a>
+                            </div>
+                            <!-- Search container -->
+                            <div class="sort-wrap">
+                                <div class="sort-wrap-inner">
+
+                                    <div class="sort-price">
+                                        <ng-select
+                                            [items]="sortOption"
+                                            (change)="onSortClick($event)"
+                                            [clearable]="false"
+                                            [(ngModel)]="selectedSort"
+                                            [ngModelOptions]="{standalone: true}"
+                                            bindLabel="name"
+                                            placeholder="Sort by">
+                                        </ng-select>
+                                    </div>
+                                    <span class="showing-page">{{total}} results</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+
+            <div (scrolled)="onScroll()"
+                 [infiniteScrollDistance]="2"
+                 class="card-wrap"
+                 infiniteScroll>
+                <div *ngFor="let product of products" class="card-box-inner">
+                    <app-product-card [product]="product"></app-product-card>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="products.length == 0" class="bg-white padd-30 no-result">
+            <span *ngIf="!loading">No Results found. Remove applied filters or<button (click)="onClickClearFilters()">start a new search.</button></span>
+            <div *ngIf="loading" class="loader-ucx">
+                <img alt="loading" class="img-responsive" src="/assets/images/loader.svg">
+            </div>
+        </div>
+
+    </div>
+</div>

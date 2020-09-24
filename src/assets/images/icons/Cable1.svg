@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="630px" height="52px" viewBox="0 0 630 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Channel-Setup-App-View" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Channel_error404" transform="translate(-20.000000, -423.000000)">
+            <g id="Group" transform="translate(20.000000, 423.768500)">
+                <path d="M0,24.7315 L549,24.7315 L0,24.7315 Z" id="Fill-1" fill="#FFFFFF"></path>
+                <polygon id="Stroke-5" fill="#6C757D" points="620.98628 0.111578947 620.98628 5.43389474 604.00708 5.43389474 590.29828 18.8317368 574.78348 19.9977368 574.92348 31.2058421 590.47468 32.9269474 604.67908 46.1044211 621.63588 46.1044211 621.63588 50.8186316 629.16508 50.7182105 629.16508 0"></polygon>
+                <line x1="10.5" y1="25.7315" x2="609" y2="25.7315" id="Stroke-2" stroke="#6C757D"></line>
+            </g>
+        </g>
+    </g>
+</svg>
